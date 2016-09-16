@@ -1,0 +1,702 @@
+@import 'https://fonts.googleapis.com/css?family=Comfortaa|Anton|Quicksand|Rubik|Candal|'
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css)
+@import klasy
+
+/*COLUMNS*/
+.col-1 
+  width: 8.33%
+.col-2 
+  width: 16.66%
+.col-3 
+  width: 24.98%
+.col-4 
+  width: 33%
+.col-5 
+  width: 41.66%
+.col-6 
+  width: 50%
+.col-7 
+  width: 58.33%
+.col-8 
+  width: 66.60%
+.col-9 
+  width: 75%
+.col-10 
+  width: 83.33%
+.col-11 
+  width: 91.66%
+.col-12 
+  width: 100%
+
+/*MARGINS*/
+
+.col-offset-1 
+  margin-left: 8.33%
+.col-offset-2 
+  margin-left: 16.66%
+.col-offset-3 
+  margin-left: 25%
+.col-offset-4 
+  margin-left: 33.33%
+.col-offset-5 
+  margin-left: 41.66%
+.col-offset-6 
+  margin-left: 50%
+.col-offset-7 
+  margin-left: 58.33%
+.col-offset-8 
+  margin-left: 66.66%
+.col-offset-9 
+  margin-left: 75%
+.col-offset-10 
+  margin-left: 83.33%
+.col-offset-11 
+  margin-left: 91.66%
+.col-offset-12 
+  margin-left: 100%
+
+//ZMIENNE//
+$white: #fff
+
+$cyan: #02C8EB
+
+$grey: #313332
+
+//MIXINY//
+=box-sizing($box-sizing)
+  -webkit-box-sizing: $box-sizing
+  -moz-box-sizing: $box-sizing
+  
+=background-size($background-size)
+  -webkit-background-size: $background-size
+  
+=background-clip($background-clip)
+  -webkit-background-clip: $background-clip
+
+=background-origin($background-origin)
+  -webkit-background-origin: $background-origin
+  
+/*@EXTEND*/
+.background-stabile 
+  background-color: #ccc
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  
+/*BODY*/
+body 
+  margin: 0
+
+/*CONTAINER*/
+.container 
+  max-width: 1200px
+  margin: 0 auto
+
+/*CLEARFIX*/
+.row:before,
+.row:after 
+  content: ""
+  display: table
+
+.row:after 
+  clear:both
+  
+/*HEADER*/
+header 
+  height: 50px
+  background-color: $grey
+  font-family: 'Rubik', sans-serif
+  height: auto
+
+  i.fa
+    font-size: 40px
+    margin-left: 5vw
+    margin-top: 1vh
+
+  ul
+    float: right
+    padding: 0
+    margin: 0
+    list-style-type: none
+  
+  li 
+    display: inline-block
+  
+  a 
+    line-height: 50px
+    color: $white
+    padding: 0 10px
+    text-decoration: none
+    display: block
+    &:hover
+      color: $cyan
+
+  li:last-child
+    padding-right: 150px
+
+/*HERO*/
+.hero 
+  background-image: url("https://hd.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg")
+  width: 100%
+  height: 400px
+  display: inline-block
+  position: relative
+  @extend .background-stabile
+
+.btn
+  margin: 0 auto
+  width: 100%
+  color: #ccc
+  height: 20px
+  bottom: 10px
+  position: absolute
+  text-align: center
+
+button
+  height: 15px
+  width: 15px
+  line-height: 15px
+  border-radius: 50%
+  border: none
+  margin-left: 15px
+  outline: none
+  cursor: pointer
+
+button:hover
+  background-color: #fff
+
+/*WELCOME*/
+.welcome 
+  font-family: 'Comfortaa', cursive
+  color: $white
+  letter-spacing: 2px
+  float: right
+  background-color: rgba(0, 0, 0, 0.3)
+  width: 400px
+  height: 200px
+  padding-left: 20px
+  border-radius: 2%
+  text-transform: uppercase
+  font-size: 4vh
+  margin: 100px 1%
+  @extend .border-import-test
+
+.welcome>h1 
+  padding-left: 30px
+  font-family: 'Candal', sans-serif
+
+/*WHITE*/
+.white 
+  width: 100%
+  display: inline-block
+  margin: 0 auto
+  text-align: center
+  font-family: 'Quicksand', sans-serif
+  box-sizing: border-box
+
+.coco
+  margin: 0 auto
+  float: left
+  cursor: pointer
+  padding: 0 30px
+  margin-top: 40px
+  
+  i.fa
+    width: 100px
+    height: 100px
+    font-size: 80px
+    line-height: 100px
+    border-radius: 10%
+    background: $grey
+    color: $white
+
+.icons
+  width: 100%
+  margin: 0 auto
+  height: 600px
+
+.xxx
+  margin-left: 4.8vw
+
+.coco:hover h1 
+  color: $cyan
+
+.coco:hover .fa 
+  background: $cyan
+
+/*GALLERY*/
+.gallery
+  text-align: center
+  margin: 0 auto
+  width: 100%
+  display: inline-block
+  font-family: 'Rubik', sans-serif
+  position: relative
+
+  h3
+    font-size: 30px
+    padding-top: 40px
+    font-family: 'Anton', sans-serif
+    letter-spacing: 3px
+    color: $grey
+
+[class*="column"]
+  float: left
+  position: relative
+  min-height: 200px
+  @extend .background-stabile
+
+[class*="column"] img 
+  width: 100%
+  float: left
+  margin: 0 auto
+  object-fit: cover
+  position: relative
+
+.column-small 
+  width: 20%
+
+.column-big 
+  width: 40%
+
+.x1 
+  background-image: url("https://hd.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg")
+
+.x2 
+  background-image: url("https://hd.unsplash.com/reserve/RONyPwknRQOO3ag4xf3R_Kinsey.jpg")
+
+.x3 
+  background-image: url("https://hd.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg")
+
+.x4 
+  background-image: url("https://hd.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg")
+
+.x5 
+  background-image: url("https://hd.unsplash.com/photo-1428591501234-1ffcb0d6871f")
+
+.x6 
+  background-image: url("https://hd.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg")
+
+.x7 
+  background-image: url("https://hd.unsplash.com/photo-1428591501234-1ffcb0d6871f")
+
+.x8 
+  background-image: url("https://hd.unsplash.com/reserve/RONyPwknRQOO3ag4xf3R_Kinsey.jpg")
+
+.gallery p 
+  width: 60%
+  margin: 0 auto
+  margin-top: -20px
+  padding-bottom: 30px
+
+.layer 
+  width: 100%
+  min-height: 200px
+  align-items: center
+  display: flex
+  justify-content: center
+  z-index: 1
+  display: none
+  
+  i.fa
+    background: #fff
+    color: $grey
+    width: 30px
+    height: 30px
+    border-radius: 10%
+    line-height: 30px
+    transition: font 2s
+    margin-top: 2px
+    margin-left: 5px
+    cursor: pointer
+
+[class*="column"]:hover .layer 
+  display: inline-flex
+  transition: font 1s
+
+[class*="column"]:hover 
+  opacity: 0.5
+  transition: 2s
+
+/*TEAM*/
+.team 
+  padding-top: 60px
+  padding-left: 7%
+  margin: 0 auto
+  width: 100%
+  height: auto
+  display: inline-block
+  color: $grey
+  box-sizing: border-box
+  text-align: center
+
+  img 
+    border-radius: 50%
+    margin: 0 auto
+    float: left
+
+.dexter 
+  width: 200px
+  height: 200px
+  border-radius: 50%
+  text-align: center
+  transition: 1s
+  margin: 0 auto
+  border: 1px solid $white
+  background-color: #000
+  cursor: pointer
+  @extend .background-stabile
+  
+  p 
+    line-height: 160px
+    font-size: 20px
+    display: none
+    color: $white
+
+.face1 
+  background-image: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/7742AABEE9.jpg")
+
+.face2 
+  background-image: url("https://static.pexels.com/photos/64385/pexels-photo-64385-large.jpeg")
+
+.face3 
+  background-image: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/4D181PL4BO.jpg")
+
+.face4
+  background-image: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/F3KHH9U6JH.jpg")
+
+.people 
+  margin: 0 auto
+  font-family: 'Rubik', sans-serif
+  float: left
+  text-align: center
+  width: 22%
+  height: auto
+  text-align: center
+  &:hover 
+    opacity: 0.7
+  &:hover p 
+    display: block
+
+/*GRADIENT*/
+.gradient-pattern
+  box-sizing: content-box
+  width: 100%
+  height: 350px
+  border: none
+  font: normal 100%/normal Arial, Helvetica, sans-serif
+  color: rgb(255, 255, 255)
+  -o-text-overflow: clip
+  text-overflow: clip
+  background: -webkit-linear-gradient(63deg, rgb(21,21,21) 5px, rgba(0,0,0,0) 5px), -webkit-linear-gradient(-117deg, rgb(21,21,21) 5px, rgba(0,0,0,0) 5px), -webkit-linear-gradient(63deg, rgb(34,34,34) 5px, rgba(0,0,0,0) 5px), -webkit-linear-gradient(-117deg, rgb(34,34,34) 5px, rgba(0,0,0,0) 5px), -webkit-linear-gradient(0deg, rgb(27,27,27) 10px, rgba(0,0,0,0) 10px), -webkit-linear-gradient(-90deg, rgb(29,29,29) 25%, rgb(26,26,26) 25%, rgb(26,26,26) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgb(36,36,36) 75%, rgb(36,36,36) 100%), rgb(19, 19, 19)
+  background: -moz-linear-gradient(27deg, rgb(21,21,21) 5px, rgba(0,0,0,0) 5px), -moz-linear-gradient(207deg, rgb(21,21,21) 5px, rgba(0,0,0,0) 5px), -moz-linear-gradient(27deg, rgb(34,34,34) 5px, rgba(0,0,0,0) 5px), -moz-linear-gradient(207deg, rgb(34,34,34) 5px, rgba(0,0,0,0) 5px), -moz-linear-gradient(90deg, rgb(27,27,27) 10px, rgba(0,0,0,0) 10px), -moz-linear-gradient(180deg, rgb(29,29,29) 25%, rgb(26,26,26) 25%, rgb(26,26,26) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgb(36,36,36) 75%, rgb(36,36,36) 100%), rgb(19, 19, 19)
+  background: linear-gradient(27deg, rgb(21,21,21) 5px, rgba(0,0,0,0) 5px), linear-gradient(207deg, rgb(21,21,21) 5px, rgba(0,0,0,0) 5px), linear-gradient(27deg, rgb(34,34,34) 5px, rgba(0,0,0,0) 5px), linear-gradient(207deg, rgb(34,34,34) 5px, rgba(0,0,0,0) 5px), linear-gradient(90deg, rgb(27,27,27) 10px, rgba(0,0,0,0) 10px), linear-gradient(180deg, rgb(29,29,29) 25%, rgb(26,26,26) 25%, rgb(26,26,26) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgb(36,36,36) 75%, rgb(36,36,36) 100%), rgb(19, 19, 19)
+  background-position: 0 5px, 10px 0, 0 10px, 10px 5px, 0 0, 0 0
+  background-origin: padding-box
+  background-clip: border-box
+  background-size: 20px 20px
+  margin-top: 40px
+
+.zero 
+  border-sizing: border-box
+  display: inline-block
+  width: 100%
+
+.uno 
+  background-image: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/2FQ69FRGV6.jpg")
+  border-right: 1px solid white
+  border-radius: 2px
+  @extend .background-stabile
+
+.dos, .uno 
+  overflow: auto
+
+.uno, .dos, .text1, .text2 
+  float: left
+
+.dos h1
+  padding-top: 80px
+
+.dos h1, .text1 
+  padding-left: 5%
+
+.text1 
+  width: 50%
+
+.text2 
+  width: 25%
+
+.text1, .text2 
+  font-family: 'Quicksand', sans-serif
+
+.info 
+  width: 100%
+  padding: 40px 0
+  height: 200px
+  display: inline-block
+  
+.all 
+  width: 100%
+
+.emu 
+  height: 200px
+  float: left
+  text-align: center
+  
+  h1 
+    font-family: 'Candal', sans-serif
+    color: $grey
+    font-size: 60px
+
+  p 
+    font-family: 'Comfortaa', cursive 
+    font-size: 18px
+    font-weight: bold
+    color: $cyan
+    margin-top: -55px
+
+/*FOOTER*/
+.footer 
+  width: 100%
+  margin: 0 auto
+  display: inline-block
+  background: $grey
+  box-sizing: border-box
+  color: #fff
+  font-family: 'Quicksand', sans-serif
+  padding: 10px 10px
+  border-bottom: 0.001em solid white
+  
+  a 
+    text-decoration: none
+
+  h1 
+    font-family: 'Rubik', sans-serif
+    font-weight: bold
+    font-size: 20px
+
+.foot1 
+  margin-left: 50px
+
+.foot2 h1 
+  padding-left: 30px
+
+.foot3 i.fa
+  width: 25px
+  height: 25px
+  line-height: 25px
+  font-size: 20px
+  color: white
+  background-color: $cyan
+  padding-left: 4px
+  box-sizing: border-box
+  border-radius: 5%
+  &:hover
+    background-color: $white
+    color: $cyan
+    transition: 1s
+
+.foot1 h1:after, .foot2 h1:after, .foot3 h1:after 
+  display: inline-block
+  width: 30px
+  content: "."
+  font-size: 0
+  color: transparent
+  height: 2px
+  background: #fff
+  vertical-align: middle
+  position: relative
+  top: -1px
+
+.foot1, .foot2, .foot3 
+  float: left
+
+table, table td, table tr 
+  border: 1px solid $white
+
+table 
+  margin-left: 5px
+  color: $cyan
+  
+.bottom 
+  width: 100%
+  height: 50px
+  background: #252726
+  color: white
+  text-align: center
+  line-height: 50px
+  margin-top: -20px
+
+/*MEDIA QUERIES*/
+@media (max-width:1000px)
+  
+  nav li:last-child 
+    padding-right: 10px
+  
+  header ul 
+    float: none
+  
+  .hero 
+    height: 200px
+  
+  .welcome 
+    padding: 0
+    margin-top: 20px
+    padding-bottom: 10px
+    height: 140px
+    text-align: center
+  
+  .welcome
+    h1 
+      font-size: 30px
+    p 
+      font-size: 26px
+  
+  button 
+    height: 25px
+    width: 25px
+    line-height: 25px
+    margin-right: 15px
+  
+  .coco 
+    width: 100%
+    margin: 0 auto
+    position: center
+    padding: 10px 0
+    margin: 5px 0
+    border: 1px solid #ccc
+    border-radius: 5% 
+    box-sizing: border-box
+    
+  .gallery 
+    text-align: center
+    padding: 0
+    margin: 0 auto
+  
+  $columns: 2
+  $margin: 2%
+  .column-big, .column-small 
+    width: (100% / $columns) - ($margin * 2)
+    margin: $margin
+  
+  .team 
+    width: 100%
+    padding: 0
+    margin: 0
+  
+  .people 
+    width: 50%
+    padding-top: 10px
+    margin: 5px 0
+    border: 1px solid #ccc
+    border-radius: 5%
+    box-sizing: border-box
+  
+  .text1, .text2 
+    font-size: 15px
+    width: 80%
+    margin: 0
+    padding-left: 10px
+  
+  .uno 
+    width: 100%
+    height: 70px
+    display: block
+    float: none
+    border-bottom: 1px solid white
+  
+  .dos 
+    width: 100%
+    display: block
+    float: none
+  
+  .text1, .text2, .dos 
+    width: 98%
+    text-align: center
+  
+  .dos h1
+    padding-top: 5px
+  
+  .emu 
+    width: 50%
+  
+  .info 
+    height: auto
+    margin-bottom: 40px
+  
+  .foot1, .foot2, .foot3 
+    width: 100%
+    margin: 0
+    padding-left: 10px
+  
+  .foot2 
+    h1 
+      padding-left: 0
+  
+    table 
+      margin-left: auto
+      margin-right: auto
+
+@media (max-width: 900px) 
+  header 
+    text-align: center
+  
+  header i.fa 
+    padding: 0
+    margin: 0
+  
+  nav 
+    float: none
+    display: block
+    margin: 0
+    padding: 0
+  
+  nav 
+    li
+      width: 100%
+      border: 1px solid $white
+      float: none
+    li ul
+      padding: 0
+  
+  .welcome 
+    width: 100%
+    text-align: center
+    margin: 0
+    padding: 0
+  
+  .foot1, .foot2, .foot3
+    text-align: center
+
+  .foot3 i.fa
+    margin-left: 4vw
+    margin-right: 4vw
+    width: 40px
+    height: 40px
+    line-height: 40px
+    font-size: 30px
+  
+  .layer 
+    display: inline-flex
+  
+  .emu 
+    h1 
+      font-size: 90px
+    p 
+      font-size: 30px
+  
+  .column-big, .column-small 
+    width: 100%
+    margin-top: 2px
+  
+@media (max-width:800px) 
+  team 
+    display: block
+    float: none
+  
+  .people 
+    width: 100%
+  
+  .emu 
+    width: 100%
+    float: none
