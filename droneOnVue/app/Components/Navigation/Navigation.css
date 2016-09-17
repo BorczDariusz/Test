@@ -1,0 +1,14 @@
+.nav-card {
+	width: auto !important; 
+	height: 400px;
+}
+.nav-title {
+	max-height: 160px;
+	color: #fff; 
+	background: url('./drone.jpg') bottom right 15% no-repeat #46B6AC;
+}
+.nav-title h2 {
+    background-color: rgba(0,0,0,0.4);
+    margin: -9px;
+    padding: 9px;
+}
